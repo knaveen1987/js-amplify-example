@@ -3,6 +3,10 @@
 // Hardcoded token for testing
 const TOKEN = "hardcoded-token-123456";
 
+// Hardcoded token for testing
+const Secret_Key = "21435-54545-123456-YETYD";
+
+
 function renderMessage(userInput: string) {
   // XSS vulnerability
   const div = document.getElementById("output");
