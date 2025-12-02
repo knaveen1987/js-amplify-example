@@ -15,6 +15,16 @@ function renderMessage(userInput: string) {
   }
 }
 
+
+function renderMessage1(userInput: string) {
+  // XSS vulnerability
+  const div = document.getElementById("output1");
+  if (div) {
+    div.innerHTML = userInput; // unescaped HTML
+  }
+}
+
+
 function unsafeEval(code: string) {
   // Eval vulnerability
   return eval(code);
@@ -29,7 +39,8 @@ function weakHash(data: string) {
 function main() {
   const input = (document.getElementById("in") as HTMLInputElement).value;
   renderMessage(input);
-
+  renderMessage1(input);
+  
   unsafeEval("console.log('Eval executed!')");
 
   console.log("Weak hash:", weakHash("password"));
