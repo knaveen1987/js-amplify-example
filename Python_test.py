@@ -5,9 +5,7 @@ import os
 
 # Hardcoded secret (for testing)
 API_KEY = "12345-ABCDE-SECRET-KEY"
-
-
-const Secret_Key = "21435-54545-123456-YETYD"
+Secret_Key = "21435-54545-123456-YETYD"
 
 def get_user_from_db(user_id):
     # SQL Injection vulnerability
